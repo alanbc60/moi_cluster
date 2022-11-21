@@ -1,3 +1,6 @@
+#!/bin/bash
+set +e
+cat > /etc/dhcpcd.conf <<'DHCPCDEOF'
 # A sample configuration for dhcpcd.
 # See dhcpcd.conf(5) for details.
 
@@ -42,7 +45,7 @@ slaac private
 
 # Example static IP configuration:
 interface wlan0
-static ip_address=172.30.2.3/20 # Change the IP according to the rp number
+static ip_address=172.30.2.3/20
 #static ip6_address=fd51:42f8:caae:d92e::ff/64
 static routers=172.30.15.254
 static domain_name_servers=148.206.191.1 8.8.8.8 8.8.4.4
@@ -57,3 +60,7 @@ static domain_name_servers=148.206.191.1 8.8.8.8 8.8.4.4
 # fallback to static profile on eth0
 #interface eth0
 #fallback static_eth0
+DHCPCDEOF
+rm -f /boot/dhcpconfig.sh
+sed -i 's| systemd.run.*||g' /boot/cmdline.txt
+exit 0
