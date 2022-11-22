@@ -5,6 +5,7 @@
 1. Creación de imagen.
 2. Configuración de red inalámbrica.
 3. Configuración de cliente DCHP.
+4. Prueba de conexión remota por SSH.
 
 ## Configuración de nodos
 
