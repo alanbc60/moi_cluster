@@ -14,4 +14,4 @@
 
 
 ## Ejecución concurrente de ordenamiento por mezcla
-
+Para ejecutar un program concurrente con MPI se requiere
