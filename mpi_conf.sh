@@ -42,6 +42,3 @@ if [ ! -z $1 ];then
 else
     echo 'Provide an option: manager or worker'
 fi
-
-This line does not apper here
-This second line does not apper here
