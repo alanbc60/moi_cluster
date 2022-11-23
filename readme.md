@@ -1,6 +1,8 @@
 # Configuración de clúster MPI sobre raspberry pi
 
-Este repositorio contiene un *script*, escrito en Bash, que permite configurar automáticamente un clúster de raspberry pi 2 que ejecutan raspbian OS de 32 bits, versión bulleyes. El *script* instala todos los paquetes necesarios 
+Este repositorio contiene un *script*, escrito en Bash, que permite configurar automáticamente un clúster de raspberry pi 2 que ejecutan raspbian OS de 32 bits, versión bulleyes. 
+
+El *script* instala todos los paquetes necesarios para ejecutar programas escritos en MPI, así como las dos utilidades que el clúster necesita para ejecutar distribuidamente tales programas: nfs y ssh.
 
 ## Configuración inicial
 
