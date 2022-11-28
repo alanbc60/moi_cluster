@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # $1 mode [manager, worker]
-manager_ip=172.30.2.1
-worker1_ip=172.30.2.2
-worker2_ip=172.30.2.3
-worker3_ip=172.30.2.4
-manager_name=rlabred001
-worker1_name=rlabred002
-worker2_name=rlabred003
-worker3_name=rlabred004
+manager_ip=172.30.2.12
+worker1_ip=172.30.2.11
+worker2_ip=172.30.2.10
+worker3_ip=172.30.2.9
+manager_name=rlabred0012
+worker1_name=rlabred0011
+worker2_name=rlabred0010
+worker3_name=rlabred009
 if [ ! -z $1 ];then
     if [ $1 == 'manager' ] || [ $1 == 'worker' ];then
         sudo apt update
