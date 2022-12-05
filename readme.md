@@ -62,6 +62,7 @@ La linea que nos interesa tener es: "/home/pi2/mpi-drive *(rw,sync,no_root_squas
 Puede que el servicio nfs este inactivo en el nodo maestro y eso podemos revisar con el comando *sudo service nfs-common -status* y para los nodos trabajadores usamos *sudo service nfs-kernel-server -status*, en caso de que es servicio se encuentre inactivo o sea necesario reiniciar para aplicar cambios en nuestra raspberry podemos reiniciar el servicio con el comando: sudo systemctl restart nfs-kernel-server
 
 En caso de tener esta situacion en varios nodos podemos utilizar el siguiente script para reiniciar los nodos de un cluster de manera mas rapida: 
+```
 !/usr/bin/env bash
 $1 mode [manager, worker]
 worker1_ip=172.30.2.1
@@ -72,3 +73,4 @@ ssh -o StrictHostKeyChecking=no $worker1_ip 'sudo systemctl restart nfs-kernel-s
 ssh -o StrictHostKeyChecking=no $worker2_ip 'sudo systemctl restart nfs-kernel-server'
 ssh -o StrictHostKeyChecking=no $worker3_ip 'sudo systemctl restart nfs-kernel-server'
 ssh -o StrictHostKeyChecking=no $worker4_ip 'sudo systemctl restart nfs-kernel-server'
+```
